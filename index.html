@@ -23,9 +23,12 @@
       <p>Currently, swing-door control systems are present, but not plentiful. The most common authentication method is proximity cards. Facial recognition is also used for authentication,
         but while it is used for other types of entrances like slide-doors, optical or barrier arm turnstiles, we hardly see any double swing door control system applied this technology.
   Furthermore, very few of them have safety functions. This project creates a system that solves 3 main problems: No-key authentication, Swing-door control and door safety functions.
+  <img src="imgs/general-idea-constructed.png" alt="How idea is initially formed">    
+  <img src="imgs/problems-and-solutions.png" alt="Main problems to solve, and our solutions to them">
       </p>
     <h2>Our method</h2>
       <p>
+        <img src="imgs/system-design.png" alt="Block diagram of the system design"><br>
         The whole system includes 4 sub-systems: DC, CW, RF and FR. Ideally, each one is in charge of a specific task, DC for Door Control, CW for Control Website, RF for RFID Cards and FR for Facial Recognition. 
         The authentication process is 2-factor: RFID card & Face verification. A typical operation process goes with these steps:
         <ol>
@@ -34,10 +37,16 @@
           <li>Get his face authenticated</li>
           <li>Door opens or remains closed</li>
         </ol>
+        <img src="">
       </p>
     <h2>Result</h2>
       <p>DC and RF circuits have been tested and assembled. For FR, Face detection and verification program provides just above average accuracy with detection speed of ~28FPS. Further improvements need to be done, 
-        especially on identity verification accuracy.</p>
+        especially on identity verification accuracy.
+        <img src="imgs/rf-subsystem-completed.jpg" alt="Finalized RF circuit encapsulated in box">
+        <img src="imgs/dc-subsystem-completed.jpg" alt="Finalized DC circuit encapsulated in box">
+        <img src="imgs/access-granted.png" alt="A typical successful access looks like this">
+        <img src="imgs/access-denied.png" alt="A typical failed access looks like this">
+      </p>
     <h2>Conclusion</h2>
       <p>
         For functionality, our proposed method works well, when each sub-system performs expected functions, individually and when combined together. For perfection, however, there still exists several disadvantages:
