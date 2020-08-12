@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title of the document</title>
+    <title>Not so frequently maintained ^^</title>
+    <style>
+      figure {
+        border: 1px #cccccc solid;
+        background-color: #fff;
+        padding: 5px;
+        font-size: .875em;
+        display: table;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+      }
+
+      figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        background-color: black;
+        color: blanchedalmond;
+        text-align: center;
+        font-style: italic;
+        padding: 0 5px 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Project: Double Swing-Door 2-Factor Access Control Security System</h1>
@@ -11,25 +35,38 @@
     <a href="#3-our-method">3. Our method</a><br>
     <a href="#4-result">4. Result</a><br>
     <a href="#5-conclusion">5. Conclusion</a><br>
-    <a href="#6-who-are-dedicated-to-this-project">6. Who are dedicated to this project</a><br>
+    <a href="#6-software-and-hardware-used">6. Software and hardware used</a><br>
+    <a href="#7-visualized-demo">7. Visualized demo</a><br>
+    <a href="#8-who-are-dedicated-to-this-project">8. Who are dedicated to this project</a><br>
     <a id="1-abstract"> <h2>Abstract</h2> </a>
-      <p>Based on the fact that security technologies are needed in today's world, where houses, buildings, factories, airports need to be secured the technological way.
+      <p>Direct words: Due to the need of an automatic mechanism for the current double swing door, this project is triggerd.</p>
+      <p>Indirect or big words: Based on the fact that security technologies are needed in today's world, where houses, buildings, factories, airports need to be secured the technological way.
         This project is chosen. The project aims to create a complete system that supports 5 different stages of an access control system including Authentication, Authorization,
       Decision, Management and Logging, combined with with automatic swing door control and safety functions. The system provides both proximity and biometrics for Authentication,
-    which uses RFID cards and facial recognition. We have have built up a prototype that has been tested in both ideal and actual environment. The results prove the be good
-  in ideal environment for all times, while actual-use environment requires more time to record and analyze.
+      which uses RFID cards and facial recognition. We have have built up a prototype that has been tested in both ideal and actual environment. The results prove the be good
+      in ideal environment for all times, while actual-use environment requires more time to record and analyze.
       </p>
     
     <a id="2-introduction"> <h2>Introduction</h2> </a>
       <p>Currently, swing-door control systems are present, but not plentiful. The most common authentication method is proximity cards. Facial recognition is also used for authentication,
         but while it is used for other types of entrances like slide-doors, optical or barrier arm turnstiles, we hardly see any double swing door control system applied this technology.
-  Furthermore, very few of them have safety functions. This project creates a system that solves 3 main problems: No-key authentication, Swing-door control and door safety functions.
-  <img src="imgs/general-idea-constructed.png" alt="How idea is initially formed">    
-  <img src="imgs/problems-and-solutions.png" alt="Main problems to solve, and our solutions to them">
+      Furthermore, very few of them have safety functions. This project creates a system that solves 3 main problems: No-key authentication, Swing-door control and door safety functions.
+      <figure>
+        <img src="imgs/general-idea-constructed.png" alt="How idea is initially formed" style="width:100%">    
+        <figcaption>How the idea is initially formed</figcaption>
+      </figure>
+      <figure>
+        <img src="imgs/problems-and-solutions.png" alt="Main problems to solve, and our solutions to them" style="width:100%">
+        <figcaption>Main problems and our solutions to them</figcaption>
+      </figure>
+  
       </p>
     <a id="3-our-method"><h2>Our method</h2></a>
       <p>
-        <img src="imgs/system-design.png" alt="Block diagram of the system design"><br>
+        <figure>
+          <img src="imgs/system-design.png" alt="Block diagram of the system design"><br>
+          <figcaption>Block diagram of the system design</figcaption>
+        </figure>
         The whole system includes 4 sub-systems: DC, CW, RF and FR. Ideally, each one is in charge of a specific task, DC for Door Control, CW for Control Website, RF for RFID Cards and FR for Facial Recognition. 
         The authentication process is 2-factor: RFID card & Face verification. A typical operation process goes with these steps:
         <ol>
@@ -43,10 +80,28 @@
     <a id="4-result"><h2>Result</h2></a>
       <p>DC and RF circuits have been tested and assembled. For FR, Face detection and verification program provides just above average accuracy with detection speed of ~28FPS. Further improvements need to be done, 
         especially on identity verification accuracy.
-        <img src="imgs/rf-subsystem-completed.jpg" alt="Finalized RF circuit encapsulated in box">
-        <img src="imgs/dc-subsystem-completed.jpg" alt="Finalized DC circuit encapsulated in box">
-        <img src="imgs/access-granted.png" alt="A typical successful access looks like this">
-        <img src="imgs/access-denied.png" alt="A typical failed access looks like this">
+        <figure>
+          <img src="imgs/rf-subsystem-completed.jpg" alt="Finalized RF circuit encapsulated in box">
+          <figcaption>Finalized RF circuit encapsulated in box</figcaption>
+        </figure>
+
+        
+        <figure>
+          <img src="imgs/dc-subsystem-completed.jpg" alt="Finalized DC circuit encapsulated in box">
+          <figcaption>Finalized DC circuit encapsulated in box</figcaption>
+        </figure>
+        
+        <figure>
+          <img src="imgs/access-granted.png" alt="A typical successful access looks like this">
+          <figcaption>A typical successful access looks like this</figcaption>
+        </figure>
+
+        
+        <figure>
+          <img src="imgs/access-denied.png" alt="A typical failed access looks like this">
+          <figcaption>A typical failed access looks like this</figcaption>
+        </figure>
+
       </p>
     <a id="5-conclusion"> <h2>Conclusion</h2> </a>
       <p>
@@ -67,7 +122,33 @@
           </ul>
         </ul>
       </p>
-    <a id="6-who-are-dedicated-to-this-project"><h2>Who are dedicated to this project</h2></a>
+      <a id="6-software-and-hardware-used"><h2>Software and hardware used in the project</h2></a>
+        <p>
+          Software:
+          <ul>
+            <li>NVDIA TensorRT</li>
+            <li>MXNet</li>
+            <li>ONNX</li>
+            <li>dlib</li>
+            <li>NodeJS</li>
+            <li>SocketIO</li>
+            <li>MySQL</li>
+          </ul>
+          Hardware:
+          <ul>
+            <li>NVIDIA Jetson Nano</li>
+            <li>IMX160IR</li>
+            <li>HIKVISION DS-2CE16H0T-ITPF</li>
+            <li>MSP430G2553</li>
+            <li>ESP32</li>
+            <li>Linear actuator</li>
+          </ul>
+        </p>
+    <a id="7-visualized-demo"><h2>Visualized demo</h2></a>
+    <a href="https://www.youtube.com/watch?v=USxextb1MSc">Watch trimmed demo video on YouTube</a>
+    <a id="8-who-are-dedicated-to-this-project"><h2>Who are dedicated to this project</h2></a>
+    Cong Phase, congpha.le@gmail.com<br>
+    Tan Tai, tainguyen2912@gmail.com
 
   </body>
 </html>
